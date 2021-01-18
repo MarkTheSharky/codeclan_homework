@@ -41,3 +41,9 @@ def find_pet_by_name(pet_shop, pet_name):
 #         if pet["name"] == pet_name:
         
 
+def add_pet_to_stock(pet_shop, new_pet):
+    current_pets = pet_shop["pets"]
+    current_pets.append(new_pet)
+    count = pet_shop["pets"]
+    return count
+
