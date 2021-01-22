@@ -5,11 +5,8 @@ from src.karaoke_room import *
 class KaraokeTest(unittest.TestCase):
     def setUp(self):
         self.room = KaraokeRoom("The Hockey Cokey Karaoke", 10)
-        self.new_room = [
-            {
-                "room_name": "Sing Song",
-                "room_capacity": 15
-            }
+        self.room_list= [
+            {"room_name": "Sing Song", "room_capacity": 15}
         ]
 
 
@@ -22,7 +19,6 @@ class KaraokeTest(unittest.TestCase):
 
 #Test to add room
     def test_add_room(self):
-        room_name = "Sing Song"
-        room_capacity = 15
+        expected_result = [{"room_name": "Sing Song", "room_capacity": 15}]
         self.room.add_room("Sing Song", 15)
-        self.assertEqual([{"room_name": "Sing Song", "room_capacity": 15}], self.room.room_list)
+        self.assertEqual(expected_result, self.room.room_list)
