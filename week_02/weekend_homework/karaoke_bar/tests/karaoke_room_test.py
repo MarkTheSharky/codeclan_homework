@@ -6,9 +6,9 @@ from src.song import *
 
 class KaraokeTest(unittest.TestCase):
     def setUp(self):
-        self.room = KaraokeRoom("The Van Halen Room", 15)
-        self.guest = Guest("Mr Burns", 10)
-        self.guest1 = Guest("Sweeny", 20)
+        self.room = KaraokeRoom("The Van Halen Room", 15, 10)
+        self.guest = Guest("Mr Burns", 10, 50)
+        self.guest1 = Guest("Sweeny", 20, 5)
         self.song = Song("Blinding Lights", "The Weekend", 3.20)
 
 
@@ -39,9 +39,20 @@ class KaraokeTest(unittest.TestCase):
     def test_to_get_capacity_of_room(self):
         self.assertEqual(15, self.room.get_room_capacity(self.room))
 
-# Test to compare guest party size to room capacity
+# Tests to compare guest party size to room capacity
     def test_compare_party_size_to_room_capacity__OK(self):
         self.assertEqual("Room OK", self.room.is_room_full(self.guest, self.room))
 
     def test_compare_party_size_to_room_capacity__FULL(self):
         self.assertEqual("Room Full", self.room.is_room_full(self.guest1, self.room))
+
+# Test to get room entry fee
+    def test_get_entry_fee(self):
+        self.assertEqual("£10", self.room.get_entry_fee())
+
+# Test which will check and compare entry fee to what a customer has in their wallet
+    def test_compare_fee_to_wallet__enough(self):
+        self.assertEqual("Right this way!", self.room.check_pay_for_room(self.guest, self.room))
+
+    def test_compare_fee_to_wallet__NOT_enough(self):
+        self.assertEqual("Not tonight pal!", self.room.check_pay_for_room(self.guest1, self.room))

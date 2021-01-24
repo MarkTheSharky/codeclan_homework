@@ -4,8 +4,8 @@ from src.guest import *
 
 class GuestTest(unittest.TestCase):
     def setUp(self):
-        self.guest = Guest("Mr Burns", 10)
-        self.guest2 = Guest("Sweeny", 20)
+        self.guest = Guest("Mr Burns", 10, 50)
+        self.guest2 = Guest("Sweeny", 20, 30)
 
 # Tests to check paramaters
     def test_for_name(self):
@@ -20,5 +20,9 @@ class GuestTest(unittest.TestCase):
 # Test to check for the party size of a guest
     def test_party_size(self):
         self.assertEqual(10, self.guest.get_party_size(self.guest))
+
+# Test to check how much is in guest wallet
+    def test_check_wallet(self):
+        self.assertEqual("£50", self.guest.check_wallet())
 
 

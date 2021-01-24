@@ -1,7 +1,8 @@
 class KaraokeRoom():
-    def __init__(self, name, capacity):
+    def __init__(self, name, capacity, fee):
         self.name = name
         self.capacity = capacity
+        self.entry_fee = fee
         self.room_guest = []
         self.playlist = []
 
@@ -26,3 +27,12 @@ class KaraokeRoom():
             return "Room OK"
         else:
             return "Room Full"
+
+    def get_entry_fee(self):
+        return f"£{self.entry_fee}"
+
+    def check_pay_for_room(self, guest, room):
+        if guest.wallet > room.entry_fee:
+            return "Right this way!"
+        else:
+            return "Not tonight pal!"
