@@ -12,7 +12,7 @@ class SongTest(unittest.TestCase):
             {"song_title": "Careless Whisper", "artist": "George Michael", "song_length": 5.01}
         ]
 
-#Tests to check paramaters
+# Tests to check paramaters
     def test_for_song_name(self):
         self.assertEqual("Blinding Lights", self.song.name)
 
@@ -22,7 +22,7 @@ class SongTest(unittest.TestCase):
     def test_for_song_length(self):
         self.assertEqual(3.20, self.song.length)
 
-#Test to add new song
+# Test to add new song
     def test_add_new_song_to_list(self):
         expected_result = {"song_title": "What Is Love", "artist": "Haddaway", "song_length": 4.56}
         self.song.add_new_song("What Is Love", "Haddaway", 4.56)
