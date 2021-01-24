@@ -1,10 +1,13 @@
 import unittest
 
+# from src.karaoke_room import *
+# from src.guest import *
 from src.song import *
 
 class SongTest(unittest.TestCase):
     def setUp(self):
         self.song = Song("Blinding Lights", "The Weekend", 3.20)
+        self.song1 = Song("Mambo Number 5", "Lou Bega", 3.41)
         self.song_list = [
             {"song_title": "Blinding Light", "artist": "", "song_length": 3.20},
             {"song_title": "Danger Zone", "artist": "Kenny Loggins", "song_length": 3.36},

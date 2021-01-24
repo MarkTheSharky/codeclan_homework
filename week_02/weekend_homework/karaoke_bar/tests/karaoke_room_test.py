@@ -7,8 +7,8 @@ from src.song import *
 class KaraokeTest(unittest.TestCase):
     def setUp(self):
         self.room = KaraokeRoom("The Van Halen Room", 15, 10)
-        self.guest = Guest("Mr Burns", 10, 50)
-        self.guest1 = Guest("Sweeny", 20, 5)
+        self.guest = Guest("Mr Burns", 10, 50, "Blinding Lights")
+        self.guest1 = Guest("Sweeny", 20, 5, "Mambo Number 5")
         self.song = Song("Blinding Lights", "The Weekend", 3.20)
 
 
