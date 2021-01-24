@@ -2,12 +2,13 @@ import unittest
 
 from src.karaoke_room import *
 from src.guest import *
-# from src.song import *
+from src.song import *
 
 class KaraokeTest(unittest.TestCase):
     def setUp(self):
         self.room = KaraokeRoom("The Van Halen Room", 15)
         self.guest = Guest("Mr Burns", 10)
+        self.song = Song("Blinding Lights", "The Weekend", 3.20)
 
 
 # Tests to check paramaters
@@ -27,3 +28,8 @@ class KaraokeTest(unittest.TestCase):
         self.room.add_guest_to_room(self.guest)
         self.room.remove_guest_from_room()
         self.assertEqual([], self.room.room_guest)
+
+# Test to add songs to room playlist
+    def test_to_add_song_to_room_playlist(self):
+        self.room.add_to_playlist(self.song)
+        self.assertEqual([("Blinding Lights by The Weekend")] , self.room.playlist)
