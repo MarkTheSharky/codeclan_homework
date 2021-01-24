@@ -8,6 +8,7 @@ class KaraokeTest(unittest.TestCase):
     def setUp(self):
         self.room = KaraokeRoom("The Van Halen Room", 15)
         self.guest = Guest("Mr Burns", 10)
+        self.guest1 = Guest("Sweeny", 20)
         self.song = Song("Blinding Lights", "The Weekend", 3.20)
 
 
@@ -33,3 +34,14 @@ class KaraokeTest(unittest.TestCase):
     def test_to_add_song_to_room_playlist(self):
         self.room.add_to_playlist(self.song)
         self.assertEqual([("Blinding Lights by The Weekend")] , self.room.playlist)
+
+# Test to get the capacity of a room
+    def test_to_get_capacity_of_room(self):
+        self.assertEqual(15, self.room.get_room_capacity(self.room))
+
+# Test to compare guest party size to room capacity
+    def test_compare_party_size_to_room_capacity__OK(self):
+        self.assertEqual("Room OK", self.room.is_room_full(self.guest, self.room))
+
+    def test_compare_party_size_to_room_capacity__FULL(self):
+        self.assertEqual("Room Full", self.room.is_room_full(self.guest1, self.room))

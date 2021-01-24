@@ -7,3 +7,6 @@ class Guest():
     def add_new_guest(self, name, party_size):
         new_guest = f"{name} plus {party_size} guests"
         self.guestlist.append(new_guest)
+
+    def get_party_size(self, guest):
+        return guest.party_size

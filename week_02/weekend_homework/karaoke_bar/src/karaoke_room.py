@@ -17,3 +17,12 @@ class KaraokeRoom():
     def add_to_playlist(self, song):
         added_song = f"{song.name} by {song.artist}"
         self.playlist.append(added_song)
+
+    def get_room_capacity(self, room):
+        return self.capacity
+
+    def is_room_full(self, guest, room):
+        if guest.party_size <= room.capacity:
+            return "Room OK"
+        else:
+            return "Room Full"
