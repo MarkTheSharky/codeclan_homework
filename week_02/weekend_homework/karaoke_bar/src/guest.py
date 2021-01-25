@@ -11,8 +11,8 @@ class Guest():
         new_guest = f"{name} plus {party_size} guests"
         self.guestlist.append(new_guest)
 
-    def get_party_size(self, guest):
-        return guest.party_size
+    def get_party_size(self):
+        return self.party_size
 
     def check_wallet(self):
         return f"£{self.wallet}"
@@ -21,7 +21,8 @@ class Guest():
         return f"{guest.fav_song} by Lou Bega"
     ### Cheated this a bit to make cheer for song work
 
-    def cheer_for_song(self, playlist, song):
-        if song == playlist[0]:
-            return "Woop, woop!"
+    def cheer_for_song(self, playlist):
+        for song in playlist:
+            if song.name == fav_song.name:
+                return "Woop, woop!"
     ### This should be better and able to search the list for the song
