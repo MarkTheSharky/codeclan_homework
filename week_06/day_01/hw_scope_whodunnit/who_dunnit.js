@@ -267,8 +267,14 @@ console.log(verdict)
 
 
 
-const checkGun = function() {
-    if (scenario.weapon === "Shotgun") {
-        scenario.murder = "Omar"
-    }
-}
+
+
+
+
+
+
+
+
+// Things to ask
+// Episode 8 for example, plotTwist gets executed before unexpectedOutcome. Is this because unexpectedOutcome was skipped first as the if statement of plotTwist was False till the function was called?
+// When plotTwist is called and makes the function True then the unexpectedOutcome can now be called?
