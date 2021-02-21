@@ -9,7 +9,7 @@ class SongTest(unittest.TestCase):
         self.song = Song("Blinding Lights", "The Weekend", 3.20)
         self.song1 = Song("Mambo Number 5", "Lou Bega", 3.41)
         self.song_list = [
-            {"song_title": "Blinding Light", "artist": "", "song_length": 3.20},
+            {"song_title": "Blinding Light", "artist": "The Weekend", "song_length": 3.20},
             {"song_title": "Danger Zone", "artist": "Kenny Loggins", "song_length": 3.36},
             {"song_title": "Tiny Dancer", "artist": "Elton John", "song_length": 6.16},
             {"song_title": "Careless Whisper", "artist": "George Michael", "song_length": 5.01}
