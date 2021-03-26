@@ -24,4 +24,14 @@ public class PlaneTest {
         plane.setPlaneType(PlaneType.BOEING787);
         assertEquals(PlaneType.BOEING787, plane.getPlaneType());
     }
+
+    @Test
+    public void getPlaneCapacity() {
+        assertEquals(3, plane.planeCapacity());
+    }
+
+    @Test
+    public void getPlaneWeight() {
+        assertEquals(6, plane.planeWeight());
+    }
 }
