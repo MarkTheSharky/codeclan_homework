@@ -45,4 +45,9 @@ public class PilotTest {
         pilot.setPilotLicenceNumber("UK/PP/123456D/D");
         assertEquals("UK/PP/123456D/D", pilot.getPilotLicenceNumber());
     }
+
+    @Test
+    public void canFlyThePlane() {
+        assertEquals("Pilots be Piloting", pilot.flyThePlane());
+    }
 }

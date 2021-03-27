@@ -20,4 +20,8 @@ public class CabinCrewMember extends Person {
     public String getRankFromEnum() {
         return this.crewRank.getRank();
     }
+
+    public String talkToThePassengers() {
+        return "Welcome aboard JavaAir!";
+    }
 }

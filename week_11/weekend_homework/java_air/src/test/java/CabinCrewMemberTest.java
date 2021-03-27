@@ -41,4 +41,9 @@ public class CabinCrewMemberTest {
     public void getRankFromEnum() {
         assertEquals("Flight Attendant", cabinCrewMember.getRankFromEnum());
     }
+
+    @Test
+    public void canTalkToThePassengers() {
+        assertEquals("Welcome aboard JavaAir!", cabinCrewMember.talkToThePassengers());
+    }
 }

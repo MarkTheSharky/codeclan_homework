@@ -16,4 +16,8 @@ public class Pilot extends CabinCrewMember {
     public void setPilotLicenceNumber(String pilotLicenceNumber) {
         this.pilotLicenceNumber = pilotLicenceNumber;
     }
+
+    public String flyThePlane() {
+        return "Pilots be Piloting";
+    }
 }
