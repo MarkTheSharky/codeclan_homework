@@ -2,8 +2,8 @@ package Aircraft;
 
 public enum PlaneType {
 
-    BOEING747(3, 6),
-    BOEING787(2, 7)
+    BOEING747(5, 50),
+    BOEING787(2, 10)
     ;
 
     private final int capacity;

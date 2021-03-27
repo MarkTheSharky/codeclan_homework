@@ -44,7 +44,7 @@ public class Flight {
         this.cabinCrewMembers.clear();
     }
 
-    public int canCountPassengers() {
+    public int countPassengers() {
         return this.passengers.size();
     }
 
@@ -90,5 +90,19 @@ public class Flight {
 
     public void setDepartureTime(String departureTime) {
         this.departureTime = departureTime;
+    }
+
+    public int availableSeats() {
+        int capacity = plane.planeCapacity();
+        int passengers = countPassengers();
+        return capacity - passengers;
+    }
+
+    public String bookPassengerToFlight(Passenger passenger) {
+        int availability = availableSeats();
+        if (availability > 0) {
+            addPassenger(passenger);
+        }
+        return "Sorry, no room for you!";
     }
 }

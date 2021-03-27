@@ -1,5 +1,6 @@
 import Aircraft.Flight;
 import Aircraft.Plane;
+import Aircraft.PlaneType;
 import Person.CabinCrewMember;
 import Person.CrewRank;
 import Person.Passenger;
@@ -11,9 +12,9 @@ import static org.junit.Assert.assertEquals;
 
 public class FlightTest {
 
-    Flight flight;
     Pilot pilot;
     Plane plane;
+    Flight flight;
     CabinCrewMember cabinCrewMember1;
     CabinCrewMember cabinCrewMember2;
     CabinCrewMember cabinCrewMember3;
@@ -23,8 +24,9 @@ public class FlightTest {
 
     @Before
     public void before() {
-        flight = new Flight(pilot, plane, "FR756", "GLA", "LDN", "18.00");
         pilot = new Pilot("Mark", CrewRank.CAPTAIN, "UK/PP/123456D/A");
+        plane = new Plane(PlaneType.BOEING747);
+        flight = new Flight(pilot, plane, "FR756", "GLA", "LDN", "18.00");
         cabinCrewMember1 = new CabinCrewMember("David", CrewRank.FIRST_OFFICER);
         cabinCrewMember2 = new CabinCrewMember("Andrew", CrewRank.PURSER);
         cabinCrewMember3 = new CabinCrewMember("Heather", CrewRank.FLIGHT_ATTENDANT);
@@ -61,28 +63,28 @@ public class FlightTest {
     }
 
     @Test
-    public void canCountPassengers() {
-        assertEquals(0, flight.canCountPassengers());
+    public void countPassengers() {
+        assertEquals(0, flight.countPassengers());
     }
 
     @Test
     public void canAddPassenger() {
         flight.addPassenger(passenger1);
-        assertEquals(1, flight.canCountPassengers());
+        assertEquals(1, flight.countPassengers());
     }
 
     @Test //This should really be able to find and remove a specific cabin crew member.
     public void canRemovePassenger() {
         flight.addPassenger(passenger1);
         flight.removePassenger();
-        assertEquals(0, flight.canCountPassengers());
+        assertEquals(0, flight.countPassengers());
     }
 
     @Test
     public void canRemoveALLPassengers() {
         flight.addPassenger(passenger1);
         flight.addPassenger(passenger2);
-        assertEquals(2, flight.canCountPassengers());
+        assertEquals(2, flight.countPassengers());
         flight.removeALLPassengers();
         assertEquals(0, flight.countCabinCrewMembers());
     }
@@ -129,5 +131,34 @@ public class FlightTest {
     public void canSetFlightTime() {
         flight.setDepartureTime("00.00");
         assertEquals("00.00", flight.getDepartureTime());
+    }
+
+    @Test
+    public void canCountAvailableSeats() {
+        flight.addPassenger(passenger1);
+        flight.addPassenger(passenger2);
+        assertEquals(2, flight.countPassengers());
+        assertEquals(3, flight.availableSeats());
+    }
+
+    @Test
+    public void canBookPassengerToFlight() {
+        flight.addPassenger(passenger1);
+        flight.addPassenger(passenger2);
+        flight.bookPassengerToFlight(passenger3);
+        assertEquals(3, flight.countPassengers());
+        assertEquals(2, flight.availableSeats());
+    }
+
+    @Test
+    public void cannotBookPassengerToFlight() {
+        flight.addPassenger(passenger1);
+        flight.addPassenger(passenger2);
+        flight.addPassenger(passenger3);
+        flight.addPassenger(passenger1);
+        flight.addPassenger(passenger2);
+        assertEquals(5, flight.countPassengers());
+        assertEquals(0, flight.availableSeats());
+        assertEquals("Sorry, no room for you!", flight.bookPassengerToFlight(passenger3));
     }
 }
