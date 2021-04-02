@@ -57,4 +57,10 @@ public class AcousticGuitarTest {
         acousticGuitar.setSellPrice(200.67);
         assertEquals(200.67, acousticGuitar.getSellPrice(), 0.0);
     }
+
+    @Test
+    public void getNumberOfStrings() {
+        assertEquals(5, acousticGuitar.getNumberOfStrings());
+    }
+
 }

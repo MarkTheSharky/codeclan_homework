@@ -12,5 +12,7 @@ public abstract class Keyboard extends Instrument {
         this.numberOfKeys = numberOfKeys;
     }
 
-
+    public int getNumberOfKeys() {
+        return numberOfKeys;
+    }
 }
