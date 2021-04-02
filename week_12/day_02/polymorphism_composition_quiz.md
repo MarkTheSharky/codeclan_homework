@@ -16,7 +16,7 @@
 
 3. What can we use to implement polymorphism in Java?
 
-        Abstract and interface classes. 
+        Abstract and interface classes and inheritance. 
 
 4. How many 'forms' can an object take when using polymorphism?
 
@@ -33,6 +33,8 @@
 
         Composition refers to classes being connected with a "IS PART OF" association.
 
+        Objects being made up of other objects.
+
 7. When would you use composition? Provide a simple example in Java.
 
         You would use composition when an object is made up of different things but you have these as seperate objects/classes and the main class could not function without 
@@ -47,6 +49,8 @@
 9. What is/are the advantage(s) of using composition/aggregation?
 
         The code is split into multiple classes/files which allows you to reuse code. You are also not tied to using all parameters like you are with inheritance. 
+
+        Dry code
 
 10. When using composition, when an object is destroyed, what happens to all the objects it is composed of?
 
