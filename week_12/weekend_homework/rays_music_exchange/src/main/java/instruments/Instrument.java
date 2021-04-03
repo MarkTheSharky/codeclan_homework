@@ -1,6 +1,10 @@
 package instruments;
 
-public abstract class Instrument implements IPlay{
+import shop.ISell;
+
+import static java.lang.Math.abs;
+
+public abstract class Instrument implements IPlay, ISell {
 
     private String brand;
     private String name;
@@ -49,5 +53,12 @@ public abstract class Instrument implements IPlay{
 
     public void setSellPrice(double sellPrice) {
         this.sellPrice = sellPrice;
+    }
+
+    public double calculateMarkup(double buyPrice, double sellPrice) {
+        double markup = sellPrice - buyPrice;
+        markup = markup / sellPrice;
+        markup = markup * 100;
+        return abs(markup);
     }
 }

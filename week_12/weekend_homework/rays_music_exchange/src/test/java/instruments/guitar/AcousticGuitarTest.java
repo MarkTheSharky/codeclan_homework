@@ -63,4 +63,12 @@ public class AcousticGuitarTest {
         assertEquals(5, acousticGuitar.getNumberOfStrings());
     }
 
+    @Test
+    public void calculateMarkup() {
+        acousticGuitar.setBuyPrice(10);
+        acousticGuitar.setSellPrice(15);
+        double markup = acousticGuitar.calculateMarkup(acousticGuitar.getSellPrice(), acousticGuitar.getBuyPrice());
+        assertEquals(50, markup, 0.1);
+    }
+
 }

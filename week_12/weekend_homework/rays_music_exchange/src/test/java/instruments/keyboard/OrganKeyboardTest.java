@@ -63,4 +63,13 @@ public class OrganKeyboardTest {
         assertEquals(37, organKeyboard.getNumberOfKeys());
     }
 
+    @Test
+    public void calculateMarkup() {
+        organKeyboard.setBuyPrice(75);
+        organKeyboard.setSellPrice(100);
+        double markup = organKeyboard.calculateMarkup(organKeyboard.getSellPrice(), organKeyboard.getBuyPrice());
+        assertEquals(33.33, markup, 0.1);
+    }
+
+
 }

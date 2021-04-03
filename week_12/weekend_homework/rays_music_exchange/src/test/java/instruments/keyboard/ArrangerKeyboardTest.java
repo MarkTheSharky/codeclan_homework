@@ -63,4 +63,11 @@ public class ArrangerKeyboardTest {
         assertEquals(32, arrangerKeyboard.getNumberOfKeys());
     }
 
+    @Test
+    public void calculateMarkup() {
+        arrangerKeyboard.setBuyPrice(100);
+        arrangerKeyboard.setSellPrice(200);
+        double markup = arrangerKeyboard.calculateMarkup(arrangerKeyboard.getSellPrice(), arrangerKeyboard.getBuyPrice());
+        assertEquals(100, markup, 0.1);
+    }
 }

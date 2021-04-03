@@ -61,4 +61,12 @@ public class ElectricGuitarTest {
     public void getNumberOfStrings() {
         assertEquals(5, electricGuitar.getNumberOfStrings());
     }
+
+    @Test
+    public void calculateMarkup() {
+        electricGuitar.setBuyPrice(100);
+        electricGuitar.setSellPrice(150);
+        double markup = electricGuitar.calculateMarkup(electricGuitar.getSellPrice(), electricGuitar.getBuyPrice());
+        assertEquals(50, markup, 0.1);
+    }
 }
