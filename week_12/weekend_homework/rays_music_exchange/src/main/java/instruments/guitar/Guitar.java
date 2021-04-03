@@ -16,4 +16,7 @@ public abstract class Guitar extends Instrument {
         return numberOfStrings;
     }
 
+    public String playSound() {
+        return "'guitar sound'";
+    }
 }

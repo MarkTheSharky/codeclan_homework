@@ -1,6 +1,6 @@
 package instruments;
 
-public abstract class Instrument {
+public abstract class Instrument implements IPlay{
 
     private String brand;
     private String name;

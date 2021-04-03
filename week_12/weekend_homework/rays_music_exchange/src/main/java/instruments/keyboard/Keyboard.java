@@ -15,4 +15,8 @@ public abstract class Keyboard extends Instrument {
     public int getNumberOfKeys() {
         return numberOfKeys;
     }
+
+    public String playSound() {
+        return "'keyboard sound'";
+    }
 }
