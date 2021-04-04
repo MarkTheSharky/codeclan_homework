@@ -1,4 +1,4 @@
-package instruments;
+package shop.stock.instruments;
 
 import shop.stock.Stock;
 

@@ -1,4 +1,4 @@
-package instruments;
+package shop.stock.instruments;
 
 public interface IPlay {
 

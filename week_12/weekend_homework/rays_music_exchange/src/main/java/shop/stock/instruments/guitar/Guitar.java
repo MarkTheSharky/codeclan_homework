@@ -1,7 +1,7 @@
-package instruments.guitar;
+package shop.stock.instruments.guitar;
 
-import instruments.Instrument;
-import instruments.InstrumentType;
+import shop.stock.instruments.Instrument;
+import shop.stock.instruments.InstrumentType;
 
 public abstract class Guitar extends Instrument {
 

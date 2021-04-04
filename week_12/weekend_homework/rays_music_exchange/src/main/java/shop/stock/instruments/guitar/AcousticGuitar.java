@@ -1,6 +1,6 @@
-package instruments.guitar;
+package shop.stock.instruments.guitar;
 
-import instruments.InstrumentType;
+import shop.stock.instruments.InstrumentType;
 
 public class AcousticGuitar extends Guitar {
 

@@ -4,7 +4,7 @@ import shop.ISell;
 
 import static java.lang.Math.abs;
 
-public abstract class Stock implements ISell{
+public abstract class Stock implements ISell {
 
     private String brand;
     private String name;
@@ -42,14 +42,14 @@ public abstract class Stock implements ISell{
         this.sellPrice = sellPrice;
     }
 
-    public double calculateProfit(double buyPrice, double sellPrice) {
-        return abs(sellPrice - buyPrice);
+    public double calculateProfit(double sellPrice, double buyPrice) {
+        return sellPrice - buyPrice;
     }
 
-    public double calculateMarkup(double buyPrice, double sellPrice) {
+    public double calculateMarkup(double sellPrice, double buyPrice) {
         double markup = sellPrice - buyPrice;
-        markup = markup / sellPrice;
+        markup = markup / buyPrice;
         markup = markup * 100;
-        return abs(markup);
+        return markup;
     }
 }

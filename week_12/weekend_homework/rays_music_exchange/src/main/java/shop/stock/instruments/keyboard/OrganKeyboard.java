@@ -1,6 +1,6 @@
-package instruments.keyboard;
+package shop.stock.instruments.keyboard;
 
-import instruments.InstrumentType;
+import shop.stock.instruments.InstrumentType;
 
 public class OrganKeyboard extends Keyboard {
 

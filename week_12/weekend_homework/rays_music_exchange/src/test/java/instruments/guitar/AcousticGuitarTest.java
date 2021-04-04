@@ -1,9 +1,10 @@
 package instruments.guitar;
 
-import instruments.InstrumentType;
+import shop.stock.instruments.InstrumentType;
 
 import org.junit.Before;
 import org.junit.Test;
+import shop.stock.instruments.guitar.AcousticGuitar;
 
 import static org.junit.Assert.assertEquals;
 
@@ -73,8 +74,8 @@ public class AcousticGuitarTest {
 
     @Test
     public void calculateMarkup() {
-        acousticGuitar.setBuyPrice(10);
-        acousticGuitar.setSellPrice(15);
+        acousticGuitar.setBuyPrice(50);
+        acousticGuitar.setSellPrice(75);
         double markup = acousticGuitar.calculateMarkup(acousticGuitar.getSellPrice(), acousticGuitar.getBuyPrice());
         assertEquals(50, markup, 0.1);
     }

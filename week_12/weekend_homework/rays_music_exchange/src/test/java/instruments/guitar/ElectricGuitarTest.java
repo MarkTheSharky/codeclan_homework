@@ -1,8 +1,9 @@
 package instruments.guitar;
 
-import instruments.InstrumentType;
+import shop.stock.instruments.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;
+import shop.stock.instruments.guitar.ElectricGuitar;
 
 import static org.junit.Assert.assertEquals;
 

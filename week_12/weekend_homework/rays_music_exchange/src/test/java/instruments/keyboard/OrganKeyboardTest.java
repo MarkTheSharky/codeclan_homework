@@ -1,9 +1,10 @@
 package instruments.keyboard;
 
 
-import instruments.InstrumentType;
+import shop.stock.instruments.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;
+import shop.stock.instruments.keyboard.OrganKeyboard;
 
 import static org.junit.Assert.assertEquals;
 
