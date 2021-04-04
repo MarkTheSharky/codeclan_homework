@@ -63,6 +63,14 @@ public class ElectricGuitarTest {
     }
 
     @Test
+    public void calculateProfit() {
+        electricGuitar.setBuyPrice(10);
+        electricGuitar.setSellPrice(15);
+        double profit = electricGuitar.calculateProfit(electricGuitar.getSellPrice(), electricGuitar.getBuyPrice());
+        assertEquals(5, profit, 0.0);
+    }
+
+    @Test
     public void calculateMarkup() {
         electricGuitar.setBuyPrice(100);
         electricGuitar.setSellPrice(150);

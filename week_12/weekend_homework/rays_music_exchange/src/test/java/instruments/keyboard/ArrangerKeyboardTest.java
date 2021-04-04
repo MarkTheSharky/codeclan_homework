@@ -64,6 +64,14 @@ public class ArrangerKeyboardTest {
     }
 
     @Test
+    public void calculateProfit() {
+        arrangerKeyboard.setBuyPrice(10);
+        arrangerKeyboard.setSellPrice(15);
+        double profit = arrangerKeyboard.calculateProfit(arrangerKeyboard.getSellPrice(), arrangerKeyboard.getBuyPrice());
+        assertEquals(5, profit, 0.0);
+    }
+
+    @Test
     public void calculateMarkup() {
         arrangerKeyboard.setBuyPrice(100);
         arrangerKeyboard.setSellPrice(200);

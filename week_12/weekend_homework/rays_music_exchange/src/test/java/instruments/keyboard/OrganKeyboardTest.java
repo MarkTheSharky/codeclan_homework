@@ -64,6 +64,14 @@ public class OrganKeyboardTest {
     }
 
     @Test
+    public void calculateProfit() {
+        organKeyboard.setBuyPrice(10);
+        organKeyboard.setSellPrice(15);
+        double profit = organKeyboard.calculateProfit(organKeyboard.getSellPrice(), organKeyboard.getBuyPrice());
+        assertEquals(5, profit, 0.0);
+    }
+
+    @Test
     public void calculateMarkup() {
         organKeyboard.setBuyPrice(75);
         organKeyboard.setSellPrice(100);
