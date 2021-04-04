@@ -1,5 +1,6 @@
 package shop.stock.instruments.guitar;
 
+import shop.ISell;
 import shop.stock.instruments.InstrumentType;
 
 public class AcousticGuitar extends Guitar {

@@ -2,8 +2,6 @@ package shop.stock;
 
 import shop.ISell;
 
-import static java.lang.Math.abs;
-
 public abstract class Stock implements ISell {
 
     private String brand;

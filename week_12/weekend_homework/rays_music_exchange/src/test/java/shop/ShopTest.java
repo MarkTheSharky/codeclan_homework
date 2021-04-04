@@ -6,14 +6,11 @@ import shop.stock.instruments.InstrumentType;
 import shop.stock.instruments.guitar.ElectricGuitar;
 import shop.stock.instruments.keyboard.OrganKeyboard;
 
-import java.util.ArrayList;
-
 import static org.junit.Assert.assertEquals;
 
 public class ShopTest {
 
     Shop shop;
-    Shop shopStock;
     ElectricGuitar instrument1;
     OrganKeyboard instrument2;
 

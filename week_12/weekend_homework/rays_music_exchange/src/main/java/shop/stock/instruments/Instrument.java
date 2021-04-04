@@ -1,5 +1,6 @@
 package shop.stock.instruments;
 
+import shop.ISell;
 import shop.stock.Stock;
 
 public abstract class Instrument extends Stock implements IPlay {
