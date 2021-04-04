@@ -52,8 +52,7 @@ public class DrumSticksTest {
     public void calculateProfit() {
         drumSticks.setBuyPrice(10);
         drumSticks.setSellPrice(15);
-        double profit = drumSticks.calculateProfit(drumSticks.getSellPrice(), drumSticks.getBuyPrice());
-        assertEquals(5, profit , 0.0);
+        assertEquals(5, drumSticks.calculateProfit(drumSticks), 0.0);
     }
 
     @Test

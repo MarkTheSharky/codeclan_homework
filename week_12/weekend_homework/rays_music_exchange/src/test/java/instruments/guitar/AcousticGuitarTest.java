@@ -68,8 +68,7 @@ public class AcousticGuitarTest {
     public void calculateProfit() {
         acousticGuitar.setBuyPrice(10);
         acousticGuitar.setSellPrice(15);
-        double profit = acousticGuitar.calculateProfit(acousticGuitar.getSellPrice(), acousticGuitar.getBuyPrice());
-        assertEquals(5, profit , 0.0);
+        assertEquals(5, acousticGuitar.calculateProfit(acousticGuitar), 0.0);
     }
 
     @Test

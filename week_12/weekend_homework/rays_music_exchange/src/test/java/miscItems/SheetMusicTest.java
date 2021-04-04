@@ -52,8 +52,7 @@ public class SheetMusicTest {
     public void calculateProfit() {
         sheetMusic.setBuyPrice(10);
         sheetMusic.setSellPrice(15);
-        double profit = sheetMusic.calculateProfit(sheetMusic.getSellPrice(), sheetMusic.getBuyPrice());
-        assertEquals(5, profit , 0.0);
+        assertEquals(5, sheetMusic.calculateProfit(sheetMusic) , 0.0);
     }
 
     @Test

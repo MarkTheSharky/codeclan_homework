@@ -29,12 +29,13 @@ public class Shop {
         stock.remove(index);
     }
 
-//    public double calculateTotalPotentialProfit() {
-//        double totalProfit = 0;
-//        for (ISell item : stock) {
-//            double profit = item.calculateProfit();
-//            totalProfit += profit;
-//        }
-//    }
+    public double calculateTotalPotentialProfit() {
+        double totalProfit = 0;
+        for (ISell item : stock) {
+            double profit = item.calculateProfit(item);
+            totalProfit += profit;
+        }
+        return totalProfit;
+    }
 
 }

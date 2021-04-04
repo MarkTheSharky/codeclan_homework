@@ -42,7 +42,7 @@ public abstract class Stock implements ISell {
         this.sellPrice = sellPrice;
     }
 
-    public double calculateProfit(double sellPrice, double buyPrice) {
+    public double calculateProfit(ISell item) {
         return sellPrice - buyPrice;
     }
 

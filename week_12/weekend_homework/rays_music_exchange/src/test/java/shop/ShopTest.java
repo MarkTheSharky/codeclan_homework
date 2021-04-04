@@ -47,11 +47,11 @@ public class ShopTest {
         assertEquals(0, shop.getStockQuantity());
     }
 
-//    @Test
-//    public void calculateTotalPotentialProfit() {
-//        shop.addToStock(instrument1);
-//        shop.addToStock(instrument2);
-//        assertEquals(150, shop.calculateTotalPotentialProfit(), 0.0);
-//    }
+    @Test
+    public void calculateTotalPotentialProfit() {
+        shop.addToStock(instrument1);
+        shop.addToStock(instrument2);
+        assertEquals(150, shop.calculateTotalPotentialProfit(), 0.0);
+    }
 
 }
